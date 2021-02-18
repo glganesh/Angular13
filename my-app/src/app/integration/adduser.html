@@ -1,0 +1,14 @@
+<button (Click)="onNoClick()">Close</button>
+<form [formGroup]="adduserData">
+    <div class="row">
+        <div class="col-md-2">Name</div>
+        <div class="col-md-2"><input type="text" formControlName="name"></div>
+        <div class="col-md-2">age</div>
+        <div class="col-md-2"><input type="text" formControlName="age"></div>
+        <div class="col-md-2">address</div>
+        <div class="col-md-2"><input type="text" formControlName="address"></div>
+        <div class="col-md-2">pin</div>
+        <div class="col-md-2"><input type="text" formControlName="pin"></div>
+    </div>
+    <button class="btn btn-primary" (click)="addUser()">Add</button>
+</form>

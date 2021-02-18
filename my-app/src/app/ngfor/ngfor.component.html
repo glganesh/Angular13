@@ -1,0 +1,24 @@
+<div class="container">
+    <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">salary</th>
+            <th scope="col">dob</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let user of users'> 
+           <td>{{user.id}}</td>
+           <td>{{user.name}}</td>
+           <td>{{user.gender}}</td>
+           <td>{{user.salary}}</td>
+           <td>{{user.dob | date:'shortDate'}}</td>
+
+          </tr>
+        </tbody>
+      </table>
+</div>

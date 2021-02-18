@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-control" (click)="myFun($event)">
+                <option value="laptop">laptop</option>
+                <option value="tv">tv</option>
+                <option value="washing machine">washing machine</option>
+                <option value="ac">ac</option>
+                <option value="mobile">mobile</option>
+                </select>
+        </div>
+        <div class="col-md-12" [ngSwitch]="abc">
+            <h2 class="text-success" *ngSwitchCase="'laptop'">laptop</h2>
+            <h2 class="text-success" *ngSwitchCase="'tv'">tv</h2>
+            <h2 class="text-success" *ngSwitchCase="'washing machine'">washing machine</h2>
+            <h2 class="text-success" *ngSwitchCase="'ac'">ac</h2>
+            <h2 class="text-success" *ngSwitchCase="'mobile'">mobile</h2>
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,76 @@
+<div class='container'>
+    <form [formGroup]='userprofileForm' (ngSubmit)='onSubmit()'>
+        <label>
+            firstName:<br>
+            <input type="text" formControlName='firstName'>
+        </label><br>
+        <div *ngIf='firstName.invalid && (firstName.dirty || firstName.touched)'class='alert alert-danger'>
+            <div *ngIf='firstName.errors.required'>
+                Name is required
+            </div>
+            <div *ngIf='firstName.errors.minlength'>
+             Name must be at least 4 characters long
+            </div>
+
+            <div *ngIf='firstName.errors.pattern'>
+             pattern mismatch
+            </div>
+            <div *ngIf='firstName.errors.NameNotAllowed'>
+                 This Name is not Allowed
+            </div>
+
+        </div>
+        <label>
+            lastName:<br>
+            <input type="text" formControlName='lastName'>
+        </label><br>
+        <label>
+            age:<br>
+            <input type="text" formControlName='age'>
+        </label><br>
+        <label>
+            Telephone:<br>
+            <input type="text" formControlName='Telephone'>
+        </label><br>
+        <div formGroupName='address'>
+            <h5>Address</h5>
+            <label>
+                email:<br>
+                <input type="text" formControlName='address1'>
+            </label><br>
+            <div *ngIf='address1.invalid && (address1.dirty || address1.touched)' class='alert alert-danger'>
+                <div *ngIf='address1.errors.required'>
+                    Email Name is required
+                </div>
+                <div *ngIf='address1.errors.email'>
+                    email is not valid
+
+                </div>
+            </div>
+            <label>
+                address2:<br>
+                <input type="text" formControlName='address2'>
+            </label><br>
+            <label>
+                permanent address:<br>
+                <input type="text" formControlName='permanentaddress3'>
+            </label><br>
+            <label>
+                zip:<br>
+                <input type="text" formControlName='zip'>
+            </label><br>
+
+        </div>
+        <div formArrayName='mobiles'>
+            <h3>Enter Your Mobile Number</h3>
+            <button type="button" class='btn btn-success' (click)='addnewmobile()'>AddNewMobile</button>
+            <div *ngFor='let mob of mobiles.controls; let i=index'>
+                <label>mobile{{i+1}}</label>
+                <input type="text" [formControlName]='i'>
+            </div>
+
+        </div>
+    <button type="submit" class='btn btn-primary' [disabled]='!userprofileForm.valid'>Submit</button>
+    <button type="button" class='btn btn-secondary' (click)='updatetheform()'>update the form</button>
+    </form>
+</div>

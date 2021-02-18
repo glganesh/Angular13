@@ -1,0 +1,236 @@
+.form18{
+    margin-top: -5px;
+    padding: 20px;
+    background:skyblue;
+}
+.container{
+    max-width: 1100px;
+    height: 3300px;
+    background: #fff;
+	border-radius: 10px;
+    -webkit-box-shadow: -1px -1px 8px -1px rgba(0,0,0,0.52);
+	-moz-box-shadow: -1px -1px 8px -1px rgba(0,0,0,0.52);
+	box-shadow: -1px -1px 8px -1px rgba(0,0,0,0.52);
+    
+}
+.nav h1{
+    padding: 10px;
+    margin-left: 410px;
+    font-size: 17px;
+    color:whitesmoke;
+    margin-top: -27px;
+    
+}
+.nav{
+    margin-top:13px;
+    display: block;
+    background:blue;
+    width: 100%;
+    height: 40px;
+    padding: 13px;
+}
+.margin-btm{
+    border-bottom: 1px dotted red;
+   
+}
+.nav h2{
+    color:red;
+    margin-top: -10px;
+}
+.nav1{
+    padding: 10px;
+}
+.row2 .form-control{
+    margin-top:-28px;
+    margin-left: 250px;
+}
+.row4 .form-control{
+    margin-top:-28px;
+    margin-left: 200px;
+}
+ .nav3{
+     padding: 10px;
+ }
+ .nav4{
+     margin-top: 13px;
+     font-family:  cursive;
+ }
+ .nav5{
+     margin-top: 20px;
+     color: red;
+     font-size: 110%;
+ }
+.row6 .form-control{
+    width: 50%;
+}
+.row8 .form-control{
+    width: 50%;
+}
+.row6 .form-control{
+    margin-top:-28px;
+    margin-left: 250px;
+}
+.row8 .form-control{
+    margin-top:-28px;
+    margin-left: 200px;
+}
+.row10 .form-control{
+    width: 50%;
+}
+.row12 .form-control{
+    width: 50%;
+}
+.row10 .form-control{
+    margin-top:-28px;
+    margin-left: 250px;
+}
+.row12 .form-control{
+    margin-top:-28px;
+    margin-left: 200px;
+}
+.row14 .form-control{
+    width: 50%;
+}
+.row16 .form-control{
+    width: 50%;
+}
+.row14 .form-control{
+    margin-top:-28px;
+    margin-left: 250px;
+}
+.row16 .form-control{
+    margin-top:-28px;
+    margin-left: 200px;
+}
+.row18 .form-control{
+    width: 50%;
+}
+.row20 .form-control{
+    width: 50%;
+}
+.row18 .form-control{
+    margin-top:-28px;
+    margin-left: 250px;
+}
+.row20 .form-control{
+    margin-top:-28px;
+    margin-left: 200px;
+}
+.row22 .form-control{
+    width: 50%;
+}
+.row24 .form-control{
+    width: 50%;
+}
+.row22 .form-control{
+    margin-top:-28px;
+    margin-left: 250px;
+}
+.row24 .form-control{
+    margin-top:-28px;
+    margin-left: 200px;
+}
+.row26 .form-control{
+    width: 50%;
+    margin-top:-28px;
+    margin-left: 250px;
+
+}
+.row28 .form-control{
+    width: 50%;
+    margin-top:-28px;
+    margin-left: 250px;
+}
+.row30 .form-control{
+    width: 50%;
+    margin-top:-28px;
+    margin-left: 200px;
+}
+.row32 .form-control{
+    width: 50%;
+    margin-top:-28px;
+    margin-left: 250px;
+}
+.row34 .form-control{
+    width: 50%;
+    margin-top:-28px;
+    margin-left: 200px;
+    
+}
+.nav14{
+    color: red;
+
+}
+.row38 .form-control{
+    width: 77%;
+    margin-top: -37px;
+    margin-left: 107px;
+    
+}
+.nav17 p{
+    color: red;
+}
+.nav19 p{
+    color: red;
+}
+.row41 .form-control{
+    width: 74%;
+    margin-left: 188PX;
+    margin-top:-24px ;
+}
+.row42 .form-control{
+    width: 78%;
+    margin-left:83px ;
+    margin-top: -5px;
+}
+.row49 .form-control{
+    margin-left: -128px;
+    margin-top: -4px;
+}
+.row50 .form-control{
+    width: 50%;
+}
+.row51 .form-control{
+    width: 50%;
+    margin-left: 557px;
+    margin-top: -37px;
+}
+.row52 img{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.row53 img{
+    margin-top: -168px;
+    margin-left: 569px;
+}
+.row56 .form-control{
+    width: 40%;
+    margin-top: -9px;
+    margin-bottom: -33px;
+}
+.row57 {
+    line-height: 36px;
+}
+.row59 {
+    line-height: 36px;
+}
+.row61 input.form-control{
+    width: 71%;
+    margin-left:-29px;
+}
+.row60{
+    line-height:40px;
+}
+.row62{
+    line-height: 40px;
+    margin-left: -60px;
+}
+.row63 .form-control{
+    width: 71%;
+    margin-left:-45px;
+}
+.row64 {
+    margin-left: 360px;
+}
+
+

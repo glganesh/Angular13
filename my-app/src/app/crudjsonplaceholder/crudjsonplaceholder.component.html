@@ -1,0 +1,46 @@
+
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">postID</th>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Body</th>
+    
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let com of lstcomments'>
+              <td>{{com.postId}}</td>
+              <td>{{com.id}}</td>
+              <td>{{com.name}}</td>
+              <td>{{com.email}}</td>
+              <td>{{com.body}}</td>
+    
+          
+          </tr>
+        </tbody>
+      </table>
+    
+
+</div>
+
+<p>userId: {{objposts.userId}}</p>
+<p>id: {{objposts.id}}</p>
+<p>Title: {{objposts.title}}</p>
+<p>Body: {{objposts.body}}</p><br><br>
+
+<p>userId: {{objputs.userId}}</p>
+<p>id: {{objputs.id}}</p>
+<p>Title: {{objputs.title}}</p>
+<p>Body: {{objputs.body}}</p><br><br>
+
+<p>userId: {{objpatch.userId}}</p>
+<p>id: {{objpatch.id}}</p>
+<p>Title: {{objpatch.title}}</p>
+<p>Body: {{objpatch.body}}</p><br><br>
+
+
+<p>Message: {{message}}</p>

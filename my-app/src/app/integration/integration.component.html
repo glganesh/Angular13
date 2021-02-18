@@ -1,0 +1,35 @@
+
+<div class="add">
+    <div>
+    <button class="btn btn-sm btn-primary" (click)='addvalue()'>add</button>
+    <button class="btn btn-primary" (click)="Export()">Export</button>
+    </div>
+</div>
+<table class="table table-dark">
+    <thead>
+      <tr>
+          <th>Actions</th>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Address</th>
+        <th scope="col">Pincode</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let user of users;let i=index'>
+          <td>
+              
+              <button class="btn btn-sm btn-primary" (click)="Update(user)" > Edit</button>
+          </td>
+        <td scope="col">{{i+1}}</td>
+
+        <td>{{user.name}}</td> 
+        <td>{{user.age}}</td>
+        <td>{{user.address}}</td>
+        <td>{{user.pin}}</td>
+        <button class="btn btn-sm btn-danger"(click)='deletevalue(user)' > delete</button>
+
+      </tr>
+    </tbody>
+  </table>
