@@ -21,7 +21,7 @@ import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
 
-  {path:'',redirectTo:'users',pathMatch:'full' },
+  {path:'',component:DashboardComponent },
   {path:'dashboard', component: DashboardComponent },
   {path:'employee', component: EmployeeComponent },
   {path:'user/:id',component:UserComponent},

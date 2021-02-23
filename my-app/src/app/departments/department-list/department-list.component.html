@@ -43,7 +43,7 @@
 
           <button mat-icon-button (click)='onView(row)'><mat-icon >list</mat-icon></button>
           <button mat-icon-button (click)='onEdit(row)'><mat-icon >launch</mat-icon></button>
-          <button mat-icon-button color="warn" (click)='onDelete(row.userseqid)'><mat-icon >delete_outline</mat-icon></button>
+          <button mat-icon-button (click)='onDelete(row.userseqid)' color='accent'><mat-icon >delete_outline</mat-icon></button>
         </mat-cell>
       </ng-container>
       <ng-container matColumnDef="loading">

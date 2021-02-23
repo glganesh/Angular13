@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup ,FormArray, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-app';
 
+  constructor(private fb:FormBuilder){}
+
   togglenav(nav:any){
     if(nav.opened){
       nav.close()
@@ -16,4 +19,7 @@ export class AppComponent {
       nav.open();
     }
   }
+
+  
+  
 }

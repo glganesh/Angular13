@@ -39,9 +39,8 @@ export class DepartmentListComponent implements OnInit {
   }
 
   fillGrid() {
-    this._service.getcomments()
-      .subscribe(
-        data => {
+    this._service.getusers()
+      .subscribe(data => {
           this.grdlistData = new MatTableDataSource(data);
           this.grdlistData.sort = this.sort;
           this.grdlistData.paginator = this.paginator;
@@ -85,7 +84,7 @@ export class DepartmentListComponent implements OnInit {
     //this._notification.success('updated sucessfully');
   }
   onDelete(seqid:number) {
-    this._service.delcomments(seqid)
+    this._service.delusers(seqid)
       .subscribe
       (
         data => {

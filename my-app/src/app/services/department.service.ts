@@ -37,7 +37,7 @@ export class DepartmentService {
     this.form.setValue(users);
   }
 
-  getcomments(): Observable<any> {
+  getusers(): Observable<any> {
     //return this._http.get('https://jsonplaceholder.typicode.com/comments');
     return this._http.get('http://localhost:3000/users');
 
@@ -45,18 +45,20 @@ export class DepartmentService {
 
   
 
-  insupdcomments(users: UsersModel): Observable<any> {
+  insupdusers(users: UsersModel): Observable<any> {
     const httpOptions = { headers: new HttpHeaders({ 'content-Type': 'application/json' }) };
     return this._http.post('http://localhost:3000/users', users, httpOptions);
   }
 
-  delcomments(seqid: number): Observable<any> {
+  delusers(seqid: number): Observable<any> {
     const httpOptions = { headers: new HttpHeaders({ 'content-Type': 'application/json' }) };
     return this._http.delete('http://localhost:3000/users/' + seqid, httpOptions);
   }
 
   
-          // Refreshing the data
+  
+          // Refreshing the data in the table 
+
   private _listners = new Subject<any>();
   listen(): Observable<any> {
     return this._listners.asObservable();

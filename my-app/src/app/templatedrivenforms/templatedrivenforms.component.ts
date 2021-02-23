@@ -10,32 +10,28 @@ export class TemplatedrivenformsComponent implements OnInit {
 
   constructor() { }
   id:number;
-
   ngOnInit(): void {
-
-
     this.id=0;
   }
-  weapons=['1','2','3'];
 
-  specialities=['4','5','6'];
+  weapons =['IRON','ZINC','COPPER','PLATIGUE','URANIUM'];
 
-  model = new SuperHero(1,'7',this.weapons[0],this.specialities[0],'8');
- 
+  specialities =['STRENGTH','FIGHT','COMEDY','CLAIMAX','SCENE']
+
+  styles =['FACE','BODY','SIXPACKS','HAIR','EYES']
+
+  model = new SuperHero(1,'Mahesh',this.weapons[0],this.specialities[0],this.styles[0],'Balu')
+
   submitted=false;
   onSubmit(){
     this.submitted=true;
     console.log('this.model.name'+this.model.name);
-    console.log('this.model.weapon'+this.model.weapon);
+    console.log('this.model.speciality'+this.model.weapon);
     console.log('this.model.speciality'+this.model.speciality);
 
   }
-
-  addnewhero(){
-    this.id=this.id+1;
-
-    this.model = new SuperHero(this.id,'','','','');
+  addnewsuperhero(){
+    this.id=this.id+1
+    this.model = new SuperHero(this.id,'','','','','');
   }
- 
 }
-

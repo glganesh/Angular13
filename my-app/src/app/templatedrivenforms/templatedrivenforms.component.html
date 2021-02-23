@@ -1,85 +1,111 @@
-<div class='container'>
 
-    <div [hidden]='submitted'>
-  <h1>super hero name</h1>
-  
-      <form #superheroForm='ngForm' (ngSubmit)='onSubmit()'>
-  
-  
-        <div class='form-group'>
-          <label for="name">super hero name</label>
-          <input type="text" class='form-control'  name="name" id="name" appNameNotAllowed="testtest" required minlength="4"  pattern="([A-Za-z]{8})" [(ngModel)]='model.name' #name='ngModel'>
-             <div *ngIf='name.invalid && (name.dirty || name.touched)' class='alert alert-danger'>
-              <div *ngIf='name.errors.required'>
-                super hero name is required
-              </div>
-              <div *ngIf='name.errors.minlength'>
-                Name is must be atleast 4 characters long
-              </div>
-              <div *ngIf='name.errors.pattern'>
-                pattern dismatch
-              </div>
-              <div *ngIf='name.errors.NameNotAllowed'>
-                This name is not allowed
-              </div>
-             </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container">
+    <div [hidden] ='submitted'>
+      <h2>SUPER HERO FORM</h2>
+      <form #superheroForm='ngForm' (ngSubmit)='onSubmit()'> 
+        <div class="form-group">
+        <label for="id">Super Hero Id</label>
+        <input type="text" class="form-control" id="id" name="id"  required minlength="6" pattern="[A-Za-z]{8}" [(ngModel)]='model.id' #id='ngModel'>
+      </div>  <div *ngIf='id.invalid && (id.dirty || id.touched)' class="alert alert-danger">
+        <div *ngIf='id.errors.required'>
+          super hero id is required
         </div>
-  
-        <div class='form-group'>
-          <label for="weapon">super hero weapon name</label>
-          <select name="weapon" id="weapon" class='form-control' required [(ngModel)]='model.weapon' #weapon='ngModel'>
+        <div *ngIf='id.errors.minlength'>
+          Name must be 4 characters long
+        </div>
+        <div *ngIf='id.errors.pattern'>
+          pattern mismatch         
+         </div>
+      </div>
+        <div class="form-group">
+          <label for="name">Super Hero Name</label>
+          <input type="text" class="form-control" id="name" name="name" required minlength="6" pattern="[A-Za-z]{8}" [(ngModel)]='model.name' #name='ngModel'>
+        </div>
+        <div *ngIf='name.invalid && (name.dirty || name.touched)' class="alert alert-danger">
+          <div *ngIf='name.errors.required'>
+            super hero name is required
+          </div>
+          <div *ngIf='name.errors.minlength'>
+            Name must be 4 characters long
+          </div>
+          <div *ngIf='name.errors.pattern'>
+            pattern mismatch         
+           </div>
+        </div>
+        <div class="form-group">
+          <label for="weapon"> Super Hero weapon</label>
+          <select class='form-control' name="weapon" id="weapon" [(ngModel)]='model.weapon' #weapon='ngModel'>
             <option *ngFor='let wp of weapons' [value]='wp'>{{wp}}</option>
           </select>
-  
-          <div [hidden]='weapon.valid || weapon.pristine' class='alert alert-danger'>
-            super hero  weapon name is required
+        </div>
+         <div class="form-group">
+          <label for="speciality"> Super Hero Specialities</label>
+          <select class='form-control' name="speciality" id="speciality" [(ngModel)]='model.speciality' #speciality='ngModel'>
+            <option *ngFor='let spec of specialities' [value]='spec'>{{spec}}</option>
+          </select>
+        </div>
+         <div class="form-group">
+          <label for="style"> Super Hero styles</label>
+          <select class='form-control' name="style" id="style" [(ngModel)]='model.style' #style='ngModel'>
+            <option *ngFor='let st of styles' [value]='st'>{{st}}</option>
+          </select>
+           <div class="form-group">
+            <label for="realname">Super Hero RealName</label>
+            <input type="text" class="form-control" id="realname" name="realname"  required minlength="6" pattern="[A-Za-z]{8}" [(ngModel)]='model.realname' #realname='ngModel'>
+          </div>  
+          <div *ngIf='realname.invalid && (realname.dirty || realname.touched)' class="alert alert-danger">
+            <div *ngIf='realname.errors.required'>
+              super hero realname is required
+            </div>
+            <div *ngIf='realname.errors.minlength'>
+              Name must be 4 characters long
+            </div>
+            <div *ngIf='realname.errors.pattern'>
+              pattern mismatch         
+             </div>
           </div>
         </div>
-          <div class='form-group'>
-            <label for="speciality">super hero weapon name</label>
-            <select name="speciality" id="weapon" class='form-control' required [(ngModel)]='model.speciality' #speciality='ngModel'>
-              <option *ngFor='let spec of specialities' [value]='spec'>{{spec}}</option>
-            </select>
-    
-            <div [hidden]='speciality.valid || speciality.pristine' class='alert alert-danger'>
-              super hero  speciality  name is required
-            </div>
-          </div>
-            <div class='form-group'>
-              <label for="realname">super hero name</label>
-              <input type="text" class='form-control' name="realname" id="realname" required [(ngModel)]='model.realname' #realname='ngModel'>
-              <div [hidden]='realname.valid || realname.pristine' class='alert alert-danger'>
-                super hero realname is required
-              </div>
-            </div>
-            <button type="submit">submit</button>
-            <button type="button" (click)='addnewhero();superheroForm.reset()'>NewSuperHero</button>
-    
+        <button type="submit" class="btn btn-danger">submit</button>
+        <button type="button" class="btn btn-primary ml-3" (click)='addnewsuperhero()'>AddNewSuperHero</button>
       </form>
     </div>
-    <div [hidden]=!submitted>
-     <h1>you are submitted the following</h1>
-      <div class='row'>
-        <div class='col-md-3'>super hero name</div>
-        <div class='col-md-9'>{{model.name}}</div>
-  
-      </div>
-      <div class='row'>
-        <div class='col-md-3'>super hero weapon name</div>
-        <div class='col-md-9'>{{model.weapon}}</div>
-  
-      </div>
-      <div class='row'>
-        <div class='col-md-3'>super hero  specialities name</div>
-        <div class='col-md-9'>{{model.speciality}}</div>
-  
-      </div>
-      <div class='row'>
-        <div class='col-md-3'>super hero realname</div>
-        <div class='col-md-9'>{{model.realname}}</div>
-      
-      </div>
-      <button type="button" (click)='submitted=false' class='btn btn-danger'>Edit</button>
-  
+      <div [hidden]='!submitted'>
+        <h2>you are submitted the following</h2>
+        <div class="row">
+          <div class="col-md-3">Super Hero Id</div>
+          <div class="col-md-9">{{model.id}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Super Hero Name</div>
+          <div class="col-md-9">{{model.name}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Super Hero weapon</div>
+          <div class="col-md-9">{{model.weapon}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Super Hero Speciality</div>
+          <div class="col-md-9">{{model.speciality}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Super Hero Style</div>
+          <div class="col-md-9">{{model.style}}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Super Hero RealName</div>
+          <div class="col-md-9">{{model.realname}}</div>
+        </div>
+        <button class="btn btn-success btn-lg" (click)='submitted=false'>Edit</button>
     </div>
   </div>
