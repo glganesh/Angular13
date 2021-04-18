@@ -13,8 +13,9 @@ import{ ViewuserComponent} from '../viewuser/viewuser.component'
   styleUrls: ['./department-list.component.css']
 })
 export class DepartmentListComponent implements OnInit {
-
-  grdlistData: MatTableDataSource<any>;
+  
+///////important///////
+  grdlistData: MatTableDataSource<any>
   searchKey = '';
 
 
@@ -61,7 +62,7 @@ export class DepartmentListComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    dialogConfig.width = '50%';
+    dialogConfig.width = '90%';
     this._dialog.open(DepartmentComponent, dialogConfig);
   }
 
@@ -96,6 +97,9 @@ export class DepartmentListComponent implements OnInit {
       )
 
 
-  }
+      }
+
 
 }
+
+

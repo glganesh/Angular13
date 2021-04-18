@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AngularinfoComponent } from './angularinfo/angularinfo.component';
 import { CrudjsonplaceholderComponent } from './crudjsonplaceholder/crudjsonplaceholder.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DepartmentListComponent } from './departments/department-list/department-list.component';
+import { Doc2kComponent } from './doc2k/doc2k.component';
 import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
 import { EmployeeComponent } from './employees/employee/employee.component';
 import { Form18Component } from './form18/form18.component';
@@ -21,7 +23,7 @@ import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
 
-  {path:'',component:DashboardComponent },
+  {path:'',component:Doc2kComponent },
   {path:'dashboard', component: DashboardComponent },
   {path:'employee', component: EmployeeComponent },
   {path:'user/:id',component:UserComponent},
@@ -39,14 +41,14 @@ const routes: Routes = [
   {path:'lazy',component:LazyComponent},
   {path:'products',component:ProductsComponent},
   {path:'orders',component:OrdersComponent},
+  {path:'angularinfo',component:AngularinfoComponent},
   ///This code is for LAZY LOADING  CONCEPT
   {path:'loadinglazy',
-     loadChildren:() =>import('./lazyloading/loadinglazy/loadinglazy.module').then(m=>m.LoadinglazyModule)},
+     loadChildren:() => import('./lazyloading/loadinglazy/loadinglazy.module').then(m=>m.LoadinglazyModule)},
   
   //{path:'**',redirectTo:'users'}
-  
-  
-];
+]
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)], 

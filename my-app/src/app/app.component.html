@@ -1,10 +1,11 @@
 
-  <mat-toolbar color="primary">
-    <button mat-icon-button (click)='togglenav(sidenav)'>
-      <mat-icon>menu</mat-icon>
+  <mat-toolbar color="primary" class='line'>
+    <button mat-icon-button (click)='sidenav.toggle()'>
+      <i class='fa fa-bars' aria-hidden="true" *ngIf='close' (click)='toggle()'></i>
+      <i class='fa fa-times' aria-hidden="true" *ngIf='!close' (click)='toggle()'></i>
     </button>
     <span>My App</span>
-    <span class="example-spacer"></span>
+    <span class="fill-remaining-space"></span>
     <button mat-icon-button >
       <mat-icon>favorite</mat-icon>
     </button>
@@ -15,37 +16,47 @@
   <mat-sidenav-container >
     <mat-sidenav #sidenav mode="side" opened class='vertical-line'>
       <mat-nav-list style="width: 200px;">
-        <a mat-list-item routerLink='department' skipLocationChange="true">
+        <a mat-list-item routerLink='dashboard' skipLocationChange="true">
           <mat-icon>dashboard</mat-icon>&nbsp;<label>Dashboard</label>
           </a>
+          <mat-divider></mat-divider>
           <a mat-list-item routerLink='departmentlist' skipLocationChange="true">
             <mat-icon>recent_actors</mat-icon>&nbsp;<label>Departments</label>
             </a>
+            <mat-divider></mat-divider>
             <a mat-list-item routerLink='integration' skipLocationChange="true">
               <mat-icon>wc</mat-icon>&nbsp;<label>Employees</label>
-              </a>
-              <a mat-list-item routerLink='form18' skipLocationChange="true">
-                <mat-icon>contact_support</mat-icon><label>Form 18</label>
+              </a>  
+              <mat-divider></mat-divider>
+              <a mat-list-item routerLink='angularinfo' skipLocationChange="true">
+                <mat-icon>contact_support</mat-icon><label>Angular Info</label>
                 </a>
+                <mat-divider></mat-divider>
                 <a mat-list-item routerLink='reactiveforms' skipLocationChange="true">
                   <mat-icon>list</mat-icon><label>Reactive Forms</label>
                   </a>
+                  <mat-divider></mat-divider>
                   <a mat-list-item routerLink='templatedrivenforms' skipLocationChange="true">
                     <mat-icon>folder_open</mat-icon><label>Template Driven Forms</label>
                     </a>
+                    <mat-divider></mat-divider>
                     <a mat-list-item routerLink='ngif' skipLocationChange="true">
                       <mat-icon>router</mat-icon><label>ngIf</label>
                       </a>
+                      <mat-divider></mat-divider>
                       <a mat-list-item routerLink='ngfor' skipLocationChange="true">
                         <mat-icon>dock</mat-icon><label>ngFor</label>
                         </a>
+                        <mat-divider></mat-divider>
                         <a mat-list-item routerLink='ngswitch' skipLocationChange="true">
                           <mat-icon>phonelink</mat-icon><label>ngSwitch</label>
                           </a>
+                          <mat-divider></mat-divider>
                           <a mat-list-item routerLink='lazy' skipLocationChange="true">
                             <mat-icon>toys</mat-icon><label>crud operations</label>
                             </a>
-        
+                            <mat-divider></mat-divider>
+
       </mat-nav-list>
 
     </mat-sidenav>

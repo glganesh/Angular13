@@ -31,7 +31,8 @@ deletevalue(inidex:any){
 }
 addvalue():void{
   const dialogRef = this.dialog.open(AddUserComponent, {
-    width: '50% ',
+    width: '100% ',
+    height:'500px',
     data:''
   });
 
@@ -47,6 +48,7 @@ addvalue():void{
 Update(user:any){
   const dialogRef = this.dialog.open(EditUserComponent, {
     width: '100% ',
+    height:'500px',
     data:user
   });
 

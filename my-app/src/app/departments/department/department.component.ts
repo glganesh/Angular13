@@ -40,18 +40,15 @@ export class DepartmentComponent implements OnInit {
     this._service.insupdusers(odept)
       .subscribe
       (
-        data => {
+        (data) => {
 
           this._service.form.reset();
           this._service.initializeFormGroup();
           this._notification.success(":: Submitted Successfully !!");
           this.onClose();
         },
-        err => console.log('HTTP Error', err),
-
+        err => console.log('HTTP Error',err)
       )
 
-      
-
-  }
+      }
 }

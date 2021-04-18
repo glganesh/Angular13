@@ -1,7 +1,8 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-sm-4">
             <select class="form-control" (click)="myFun($event)">
+                <option value="select the produt">please select the product</option>
                 <option value="laptop">laptop</option>
                 <option value="tv">tv</option>
                 <option value="washing machine">washing machine</option>
@@ -9,14 +10,33 @@
                 <option value="mobile">mobile</option>
                 </select>
         </div>
-        <div class="col-md-12" [ngSwitch]="abc">
-            <h2 class="text-success" *ngSwitchCase="'laptop'">laptop</h2>
-            <h2 class="text-success" *ngSwitchCase="'tv'">tv</h2>
-            <h2 class="text-success" *ngSwitchCase="'washing machine'">washing machine</h2>
+        <div class="col-sm-12" [ngSwitch]="selecteditem">
+            <div  *ngSwitchCase="'laptop'"><button class="btn btn-success mt-2">Agree</button></div>
+            <div *ngSwitchCase="'tv'"><button class="btn btn-danger mt-2">Reject</button></div>
+            <h1 class="text-success" *ngSwitchCase="'washing machine'">washiadlkfjsdf
+                asdlkfjalskdfasjkdf
+                asdkf;jhasldkjfaskdf
+                asdfkbasdjkfasdbfhasbdfajsdf
+                sdf
+                gsdf
+                f
+                f
+                f
+                sdfgsdfg
+                sdfg
+                sd
+                fg
+                sdf
+                g
+                sdfffffffffds
+                dddddddddddddddddddddddddddddf
+                fffffffffffffffffffffffffff
+                ffffffffffffffffffffng machine<button class="btn btn-success mt-2"(click)='hello()'>Agree</button></h1>
             <h2 class="text-success" *ngSwitchCase="'ac'">ac</h2>
-            <h2 class="text-success" *ngSwitchCase="'mobile'">mobile</h2>
+            <h3 class="text-success" *ngSwitchCase="'mobile'">mobile</h3>
+            <p>{{msg}}</p>
         </div>
 
 
     </div>
-</div>
+</div> 

@@ -1,7 +1,6 @@
 
-
   <div class="search-div">
-    <button mat-raised-button (click)='onCreate()' color='accent'>
+    <button mat-raised-button  (click)='onCreate()' color='accent'>
       <mat-icon>add</mat-icon>Create
     </button>
     <mat-form-field class="search-form-field" floatLabel="never">
@@ -11,8 +10,8 @@
       </button>
     </mat-form-field>
   </div>
-  <div class="mat-elevation-z8">
-    <mat-table [dataSource]="grdlistData"  matSort>
+  <div class="mat-elevation-z8 ">
+    <mat-table [dataSource]="grdlistData" matSort>
       <ng-container matColumnDef="userseqid">
         <mat-header-cell *matHeaderCellDef  mat-sort-header>SEQID</mat-header-cell>
         <mat-cell *matCellDef="let element">{{element.userseqid}}</mat-cell>

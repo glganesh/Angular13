@@ -6,7 +6,7 @@ export class SuperHero{
         public weapon:string,
         public speciality:string,
         public style:string,
-        public realname:string
+        public realname:string,
     ){}
 
 

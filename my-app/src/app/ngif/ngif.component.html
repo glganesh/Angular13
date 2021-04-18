@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <button class="btn btn-primary" (click)="onCreateBlock()">create block</button>
 
     <br><br>
@@ -9,4 +9,39 @@
     <ng-template #elseblock>
         <div>no block has been created yet</div>
     </ng-template>
-</div>
+
+    </div> -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6" (change)='onchange($event.target.value)'>
+                <select class='form-control mt-2' >
+                    <option value="111">111</option>
+                    <option value="222">222</option>
+                    <option value="333">333</option>
+                    <option value="444">444</option>
+                    <option value="555">555</option>
+                </select>
+            </div>
+            <div class="col-sm-12">
+                <div *ngIf='show'>
+                    <form action="/action_page.php">
+                        <label for="fname">First name:</label><br>
+                        <input class='form-control' type="text" id="fname" name="fname"><br>
+                        <label for="lname">Last name:</label><br>
+                        <input class='form-control' type="text" id="lname" name="lname" value="Doe"><br><br>
+                        <label for="fname">First name:</label><br>
+                        <input class='form-control' type="text" id="fname" name="fname" value="John"><br>
+                        <label for="lname">Last name:</label><br>
+                        <input class='form-control' type="text" id="lname" name="lname" value="Doe"><br><br>
+                        <label for="fname">First name:</label><br>
+                        <input class='form-control' type="text" id="fname" name="fname" value="John"><br>
+                        <label for="lname">Last name:</label><br>
+                        <input class='form-control' type="text" id="lname" name="lname" value="Doe"><br><br>
+                        <input class='btn btn-danger' type="submit" value="Submit">
+                      </form> 
+
+                </div>
+            </div>
+        </div>
+    </div>

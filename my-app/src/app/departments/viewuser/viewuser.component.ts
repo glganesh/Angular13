@@ -37,7 +37,7 @@ export class ViewuserComponent implements OnInit {
     odept.address = this._service.form.value['address'];
     odept.mobile = this._service.form.value['mobile'];
 
-    this._service.insupdcomments(odept)
+    this._service.insupdusers(odept)
       .subscribe
       (
         data => {

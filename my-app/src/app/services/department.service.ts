@@ -40,9 +40,7 @@ export class DepartmentService {
   getusers(): Observable<any> {
     //return this._http.get('https://jsonplaceholder.typicode.com/comments');
     return this._http.get('http://localhost:3000/users');
-
   }
-
   
 
   insupdusers(users: UsersModel): Observable<any> {
@@ -69,4 +67,3 @@ export class DepartmentService {
   }
 
 }
-

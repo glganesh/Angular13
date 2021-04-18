@@ -8,30 +8,31 @@ import { SuperHero } from '../superheros';
 })
 export class TemplatedrivenformsComponent implements OnInit {
 
-  constructor() { }
   id:number;
+  constructor() { }
   ngOnInit(): void {
-    this.id=0;
+  this.id=0;
   }
 
-  weapons =['IRON','ZINC','COPPER','PLATIGUE','URANIUM'];
+  specialities =['11','2','3','4'];
 
-  specialities =['STRENGTH','FIGHT','COMEDY','CLAIMAX','SCENE']
+  weapons =['15','6','7','8'];
 
-  styles =['FACE','BODY','SIXPACKS','HAIR','EYES']
+  model = new SuperHero(1,'vinoth',this.weapons[0],this.specialities[0],'fighting','Aravindh');
 
-  model = new SuperHero(1,'Mahesh',this.weapons[0],this.specialities[0],this.styles[0],'Balu')
-
-  submitted=false;
+    submitted=false;
   onSubmit(){
     this.submitted=true;
-    console.log('this.model.name'+this.model.name);
-    console.log('this.model.speciality'+this.model.weapon);
-    console.log('this.model.speciality'+this.model.speciality);
+    console.log(this.model.name + 'this.model.name')
+    console.log(this.model.weapon +'this.model.weapon')
+    console.log(this.model.speciality +'this.model.speciality')
 
   }
-  addnewsuperhero(){
-    this.id=this.id+1
-    this.model = new SuperHero(this.id,'','','','','');
+
+  createnewsuperhero(){
+    this.id=this.id+1;
+    this.model=new SuperHero(this.id,'','','','','');
   }
+
 }
+

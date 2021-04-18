@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { DepartmentListComponent } from './departments/department-list/department-list.component';
 import { DepartmentComponent } from './departments/department/department.component';
 import { EmployeeComponent } from './employees/employee/employee.component';
@@ -32,11 +31,17 @@ import { ProductsComponent } from './lazyloading/products/products.component';
 import { OrdersComponent } from './lazyloading/orders/orders.component';
 import { LazyComponent } from './lazyloading/lazy/lazy.component';
 import { LoadinglazyComponent } from './lazyloading/loadinglazy/loadinglazy.component';
+import { Doc2kComponent } from './doc2k/doc2k.component';
+import { AngularinfoComponent } from './angularinfo/angularinfo.component';
+
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NgMaterialMultilevelMenuModule } from 'ng-material-multilevel-menu';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
     DepartmentListComponent,
     EmployeeComponent,
     EmployeeListComponent,
@@ -61,6 +66,11 @@ import { LoadinglazyComponent } from './lazyloading/loadinglazy/loadinglazy.comp
     
     LoadinglazyComponent,
     
+    Doc2kComponent,
+    
+    AngularinfoComponent,
+    
+    DashboardComponent,
     
     
   ],
@@ -71,10 +81,12 @@ import { LoadinglazyComponent } from './lazyloading/loadinglazy/loadinglazy.comp
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgMaterialMultilevelMenuModule
   ],
-  providers: [DepartmentService, NotificationService,FreeapiService,EmployeeService],
+  providers: [DepartmentService, NotificationService,FreeapiService,EmployeeService,],
   bootstrap: [AppComponent],
   entryComponents: [DepartmentComponent,AddUserComponent,EditUserComponent,EmployeeComponent,ViewuserComponent]
 })
 export class AppModule { }
+

@@ -1,7 +1,7 @@
 <button (Click)="onNoClick()">Close</button>
-<form [formGroup]="adduserData">
-    <div class="row">
-        <div class="col-md-2">Name</div>
+<!--form [formGroup]="adduserData">
+    < <div class="row">
+        <div>Name</div>
         <div class="col-md-2"><input type="text" formControlName="name"></div>
         <div class="col-md-2">age</div>
         <div class="col-md-2"><input type="text" formControlName="age"></div>
@@ -9,6 +9,22 @@
         <div class="col-md-2"><input type="text" formControlName="address"></div>
         <div class="col-md-2">pin</div>
         <div class="col-md-2"><input type="text" formControlName="pin"></div>
-    </div>
+    </div> -->
+
+
+    <form [formGroup]="adduserData">
+        <div class='col-sm-6'>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter your Name" name="name">
+        </div>
+        </div>
+            <div class='col-sm-6'>
+    
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="text" class="form-control" id="Age" formControlName="age" placeholder="Enter your Age" name="age">
+        </div>
+        </div>
     <button class="btn btn-primary" (click)="addUser()">Add</button>
 </form>

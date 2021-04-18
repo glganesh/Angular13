@@ -11,8 +11,13 @@ export class NgswitchComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  abc:string;
+  selecteditem:any;
   myFun(val){
-    this.abc=val.target.value;
+    this.selecteditem=val.target.value;
+}
+msg:string;
+hello(){
+this.msg="sdfgdsfg"
+this.selecteditem=false;
 }
 }

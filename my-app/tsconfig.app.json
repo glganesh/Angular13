@@ -4,7 +4,14 @@
   "compilerOptions": {
     "outDir": "./out-tsc/app",
     "types": [],
-    "target": "ES2015"
+    "target": "ES2015",
+    "importHelpers": true,
+    "baseUrl": "./",
+    "paths": {
+        "tslib" : ["bower_components/tslib/tslib.d.ts"]
+    },
+    
+    
   },
   "files": [
     "src/main.ts",

@@ -1,106 +1,80 @@
-<br>
 <div class="container">
- <div class="col-md-12">
-  <form [formGroup]='userprofileform' (ngSubmit)='onSubmit()'> 
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder='Enter your FirstName' formControlName='firstname'>
-    </div>
-    <div *ngIf='firstname.invalid && (firstname.dirty || firstname.touched)' class="alert alert-danger">  
-      <div *ngIf='firstname.errors.required'>
-        firstname is required
+  <div class="col-sm-12">
+    <form [formGroup]='userprofileform' (ngSubmit)='onSubmit()'>
+      <div class="form-group"><br>
+        <input type="text" class='form-control' placeholder="FIRSTNAME" formControlName='firstname'>
       </div>
-      <div *ngIf='firstname.errors.minlength'>
-        Name must be 6 characters long
+              <div *ngIf='firstname.invalid && (firstname.dirty || firstname.touched)' class='alert alert-danger'>
+                <div *ngIf='firstname.errors.required'>
+                  firstname is required
+                </div>
+                <div *ngIf='firstname.errors.minlength'>
+                  length must be 6 characters long
+                </div>
+                <div *ngIf='firstname.errors.pattern'>
+                  pattern mismatch
+                </div>
+                <div *ngIf='firstname.errors.email'>
+                  email is required
+                </div>
+              </div>
+      <div class="form-group">
+        <input type="number" class="form-control" placeholder="LASTNAME" formControlName='lastname'>
       </div>
-      <div *ngIf='firstname.errors.pattern'>
-        pattern mismatch
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="EMAIL" formControlName='email'>
       </div>
-    </div>
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder='Enter your LastName' formControlName='lastname'>
-    </div>
-    <div class="form-group">
-      <input type="number" class="form-control" placeholder='Enter your Age' formControlName='age'>
-    </div>
-    <div class="form-group">
-      <input type="date" class="form-control" placeholder='Enter your DOB' formControlName='dob'>
-    </div>
-
-    <div formGroupName='address'>
+             <div *ngIf='email.invalid && (email.dirty || email.touched)' class="alert alert-danger">
+               <div *ngIf='email.errors.email'>
+                   email is required
+              </div>
+             </div>
+      <div class="form-group">
+        <input type="date" class="form-control" placeholder="DATE" formControlName='dob'>
+      </div>
+      <div formGroupName='address'>
 
       <div class="form-group">
-        <input type="text" class="form-control" placeholder='Enter your Address1' formControlName='address1'>
+        <input type="text" class="form-control" placeholder="ADDRESS1" formControlName='address1'>
       </div>
-      <div *ngIf='address1.invalid && (address1.dirty || address1.touched)' class="alert alert-danger">
-        <div *ngIf='address1.errors.required'>
-          address1 is required
-        </div>
-        <div *ngIf='address1.errors.minlength'>
-          Name must be 6 characters long
-        </div>
-        <div *ngIf='address1.errors.pattern'>
-          pattern mismatch
-        </div>
+               <div *ngIf='address1.invalid && (address1.dirty || address1.touched)' class="alert alert-danger">
+                 <div *ngIf='address1.errors.required'>
+                   address1 is required
+                 </div>
+                 <div *ngIf='address1.errors.minlength'>
+                   length must be 6 characters long
+               </div>
+               <div *ngIf='address1.errors.pattern'>
+                  pattern mismatch
+                </div>
+               </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="ADDRESS2" formControlName='address2'>
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" placeholder="ZIPCODE" formControlName='zipcode'>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="STATE" formControlName='state'>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="COUNTRY" formControlName='country'>
       </div>
 
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder='Enter your Address2' formControlName='address2'>
       </div>
-      <div *ngIf='address2.invalid && (address2.dirty || address2.touched)' class="alert alert-danger">
-     
-        <div *ngIf='address2.errors.required'>
-          address2 is required
-        </div>
-        <div *ngIf='address2.errors.minlength'>
-          Name must be 6 characters long
-        </div>
-        <div *ngIf='address2.errors.pattern'>
-          pattern mismatch
-        </div>
-      </div>
+      <div formArrayName='mobiles'>
+        <h3>Enter Your Mobile Number</h3>
+        <button class="btn btn-success" (click)='addnewmobilenumber()'>Add New Mobile Number</button>
+        <div *ngFor='let mob of mobiles.controls;let i=index'><br>
+          <label>mobile{{i+1}}</label>
+          <input type="text" [formControlName]='i'>
 
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder='Enter your State' formControlName='state'>
-      </div>
-      <div *ngIf='state.invalid && (state.dirty || state.touched)' class="alert alert-danger">  
-        <div *ngIf='state.errors.required'>
-          state is required
         </div>
-        <div *ngIf='state.errors.minlength'>
-          Name must be 6 characters long
-        </div>
-        <div *ngIf='state.errors.pattern'>
-          pattern mismatch
-        </div>
-      </div>
-
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder='Enter your Country' formControlName='country'>
-      </div>
-      <div *ngIf='country.invalid && (country.dirty || country.touched)' class="alert alert-danger">
-        <div *ngIf='country.errors.required'>
-          country is required
-        </div>
-        <div *ngIf='country.errors.minlength'>
-          Name must be 6 characters long
-        </div>
-        <div *ngIf='country.errors.pattern'>
-          pattern mismatch
-        </div>
-      </div>
-    </div>
-    
-    <div formArrayName='mobiles'>
-      <h3>Enter Your Mobile Number</h3>
-      <button class="btn btn-primary" (click)='addnewmobilenumber()'>ADD NEW MOBILE NUMBER</button><br>
-      <div *ngFor='let mob of mobiles.controls,let i=index'><br>
-        <label>mobile{{i+1}}</label>
-        <input type="text" [formControlName]='i'>
 
       </div><br>
-    </div>
-    <button type="submit" class="btn btn-danger" [disabled]="!userprofileform.valid">submit</button>
-    <button class="btn btn-success ml-3" (click)='updateform()'>update</button>
-  </form>
- </div>
+      <button class="btn btn-danger " type="submit">submit</button>
+      <button class="btn btn-success ml-3" (click)='updateform()'>update</button>
+    </form>
+  </div>
 </div>
+

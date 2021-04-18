@@ -7,26 +7,29 @@
     </button>
 </mat-toolbar>
 <form [formGroup]='_service.form' class='normal-form'>
-    <mat-grid-list cols="1" rowHeight="400px">
+    <mat-grid-list cols="1" rowHeight="300px">
         <mat-grid-tile>
             <div class='controles-container'>
                
                     <input formControlName='userseqid' matInput hidden>                   
-            
-                    <input formControlName='id' matInput  hidden>                   
-            
-                <mat-form-field>
+
+                    <input formControlName='id' matInput  hidden>    
+                    <div class='form-group'>
+                        <input type="text" class="form-control" formControlName='name' placeholder='NAME'>
+                    </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                <!-- <mat-form-field>
                     <input formControlName='name' matInput placeholder="NAME" autocomplete="off">
                     <mat-error *ngIf="_service.form.controls['name'].errors?.required">This field is mandatory.</mat-error>
-                    <!--mat-error *ngIf="_service.form.controls['name'].errors?.minlength">Minimum 8 charactors needed.</mat-error!-->
-                </mat-form-field>
+                    <mat-error *ngIf="_service.form.controls['name'].errors?.minlength">Minimum 8 charactors needed.</mat-error>
+                </mat-form-field!-->
                 <mat-form-field>
                     <input formControlName='email' matInput placeholder="EMAIL" autocomplete="off">
                     <mat-error>This field is mandatory</mat-error>
                 </mat-form-field>
                 <mat-form-field>
                     <input formControlName='mobile' matInput placeholder="MOBILE" autocomplete="off">
-        
+                    <mat-error>This field is mandatory</mat-error>
+                    
                 </mat-form-field>
                 <mat-form-field>
                     <input formControlName='address' matInput placeholder="ADDRESS" autocomplete="off">
@@ -38,6 +41,7 @@
     </mat-grid-list>
     <mat-toolbar>
         <span class='fill-remaining-space'></span>
+        
         <div class='button-row'>
             <button mat-raised-button color='warn' type='submit' (click)='onSubmit()' [disabled]='_service.form.invalid'>submit</button>
             <button mat-raised-button color='primary' (click)='onClear()'>clear</button>
@@ -45,3 +49,4 @@
     </mat-toolbar>
 
 </form>
+

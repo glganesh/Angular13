@@ -15,4 +15,5 @@ export class NgforComponent implements OnInit {
     this.users=this.service.getusers();
   }
 
+  toggle = nav => nav.open = !nav.open;
 }

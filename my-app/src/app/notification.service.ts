@@ -18,7 +18,7 @@ export class NotificationService {
       verticalPosition: 'top'
     }
   
-  
+  // panelclass means background color and font size change the appearance
     success(msg:any) { 
       this.config['panelClass'] = ['notification', 'success'];
       this.snackBar.open(msg, '',this.config);

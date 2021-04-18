@@ -1,0 +1,411 @@
+<div>
+   <h1>Angular</h1>
+   <br>
+
+   Angular is a front end/client side javascript framework
+   <br>
+
+   It is single page application
+   <br>
+
+   Angular is written in typescript
+   <br>
+
+   Ability to catch error early
+   <br>
+
+   Developed and maintained by Google
+   <br>
+
+   Angular provides code reuse facility
+    <br>
+   
+    <h1>Bootstrap</h1>
+    <br>
+
+   npm install bootstrap --save
+   <br>
+
+   npm install jquery --save
+   <br>
+
+   npm install popper.js --save
+   <br>
+
+
+<h1>   Data Binding </h1>       
+<br>
+
+ Data binding means communication b/w Ts & HTML
+ <br>
+
+    
+    <h1>one way DataBinding</h1>
+    <br>
+
+        The data was passing HTML into TS called one way databinding.
+        <br>
+
+            string Interpolation 
+    <br>
+
+            property Binding [property]='data'
+    <br>
+
+            event binding (event)='expression'
+    <br>
+
+
+<h1>    Two way Data Binding</h1>       
+<br>
+
+ If user click the button the effect will appear in TS and HTML called Two way data binding 
+ <br>
+
+                [(ngModel)]='username'  username:string='ganesh'
+                <br>
+
+<h1>    Angular Routing</h1>     
+<br>
+
+ Routing in Angular helps us navigate from one view to another as users perform tasks in web apps
+ <br>
+
+<h1>    Routing Params</h1>
+<br>
+
+ Route parameters are parts of the URL that will change based on the object we want to display.
+ <br>
+
+     For example, if we wanted to view information on user #1, we would visit the path /users/1 . ... 
+    <br>
+
+     Next we need to add a route for it to display at /users/:userId
+     <br>
+
+      <h1>Lazy loading</h1>
+    <br>
+
+     Lazy loading is a technique in Angular that allows you to load JavaScript components asynchronously 
+    <br>
+
+     when a specific route is activated. 
+    <br>
+
+     It improves the speed of the application load time by splitting the application into several bundles
+     <br>
+
+       <h1> NGMODULE</h1>
+    <br>
+
+     An NgModule is a class marked by the @NgModule decorator. @NgModule takes a metadata object 
+    <br>
+
+     that describes how to compile a component's template and how to create an injector at runtime.
+    <br>
+
+
+       <h1>service in Angular</h1>
+    <br>
+
+     This helps in dividing the web application into small, different logical units which can be reused.
+     <br>
+
+       <h1>httpclient</h1>
+    <br>
+
+     Most front-end applications need to communicate with a server over the HTTP protocol,
+    <br>
+
+      in order to download or upload data and access other back-end services
+    <br>
+
+
+       <h1> Components in Angular</h1>
+    <br>
+
+      Components are the main building block for Angular applications. 
+    <br>
+
+      Each component consists of: 
+    <br>
+      
+      An HTML template that declares what renders on the page.
+    <br>
+
+       A Typescript class that defines behavior. 
+    <br>
+
+      A CSS selector that defines how the component is used in a template
+    <br>
+
+
+       <h1> Directives in Angular</h1>
+    <br>
+
+      Directives are custom HTML attributes which tell angular to change the style or 
+    <br>
+
+      behavior of the Dom elements.
+    <br>
+
+       When we say that components are the building blocks of Angular applications,
+    <br>
+
+       we are actually saying that directives are the building blocks of Angular applications.
+    <br>
+
+
+        <h1> Difffence between constructor and Ngoninit</h1>
+    <br>
+
+       The main difference between constructor and ngOnInit is that ngOnInit is lifecycle hook and
+    <br>
+
+        runs after constructor. Component interpolated template and
+    <br>
+
+        input initial values aren't available in constructor, but they are available in ngOnInit 
+    <br>
+
+
+         <h1> what is class in angular</h1>
+    <br>
+
+        The ng-class directive dynamically binds one or more CSS classes to an HTML element. 
+    <br>
+
+        The value of the ng-class directive can be a string, an object, or an array
+        <br>
+
+         <h1> what is constructor why constructor used in angular</h1>
+    <br>
+
+        A constructor is a special method which will be called whenever we create new objects.
+    <br>
+
+        Constructor ensures proper initialization of fields (class members) in the class and its subclasses.
+        <br>
+
+          <h1>There are eight lifecycle hooks in Angular:
+        </h1>
+    <br>
+
+        <h2> ngOnChanges()</h2>
+    <br>
+
+         when the value of the data bound property of a directive changes.
+    <br>
+
+          then the method is called ngonchanges
+          <br>
+
+           <h2>ngOnInit()</h2>
+    <br>
+
+         A lifecycle hook that is called after Angular has initialized all data-bound properties of a directive.
+    <br>
+
+         Define an ngOnInit() method to handle any additional initialization tasks.
+         <br>
+
+           <h2>ngDoCheck()</h2>
+    <br>
+
+         The DoCheck interface is used to detect changes
+    <br>
+
+          manually which the angular change detection have overlooked
+          <br>
+
+           <h2>ngAfterContentInit()</h2>
+    <br>
+
+         A callback method that is invoked immediately 
+    <br>
+
+         after Angular has completed initialization of all of the directive's content
+         <br>
+         <h2>ngAfterViewInit()</h2>
+    <br>
+
+         Angular ngAfterViewInit() is the method of AfterViewInit interface. 
+    <br>
+
+          ngAfterViewInit() is used to handle any additional initialization tasks.
+          <br>
+
+          <h2> ngAfterContentChecked()</h2>
+    <br>
+
+         A callback method that is invoked immediately 
+    <br>
+
+         after the default change detector has completed checking all of the directive's content
+         <br>
+
+           
+
+           <h2>ngAfterViewChecked()</h2>
+    <br>
+
+         A callback method that is invoked immediately after the default change detector
+    <br>
+
+          has completed one change-check cycle for a component's view
+          <br>
+
+            <h2>ngonDestroy()</h2>
+
+    <br>
+    A callback method that performs custom clean-up, 
+    <br>
+
+         invoked immediately before a directive, pipe, or service instance is destroyed.
+         <br>
+
+           <h1>interceptors in angular    </h1>    
+    <br>
+
+         Interceptors allow us to intercept incoming or outgoing HTTP requests using the HttpClient . 
+    <br>
+
+         By intercepting the HTTP request, we can modify or change the value of the request
+         <br>
+
+         <h1> pipes</h1>
+    <br>
+
+            only transform/format data before display in the view
+    <br>
+
+            built in pipes,
+    <br>
+
+            chaining pipes,
+    <br>
+
+             parameterizing pipes,
+    <br>
+
+               <h2>pure and impure pipes</h2>
+    <br>
+
+
+              . A pure pipe in Angular detects a change in the value or the parameters passed to a pipe.
+    <br>
+
+               An impure pipe is called for every change detection whether the value or parameter(s) changes.
+    <br>
+
+
+            <h2>chaining pipes</h2>
+    <br>
+
+            pipes can be chained together to make use of multiple pipes in one expression
+            <br>
+
+            
+           <h2>Async pipe </h2>     
+    <br>
+
+         The async pipe subscribes to an Observable or Promise and returns the latest value it has emitted
+         <br>
+
+  <h2> Observable</h2>       
+  <br>
+
+    The HTTP module uses observables to handle AJAX requests and responses.
+    <br>
+
+<h1> subject</h1>       
+<br>
+
+  An RxJS Subject is a special type of Observable that allows values to be multicasted to many Observers
+  <br>
+
+
+          <h1>Component Directive</h1>
+    <br>
+
+
+            Directives with own component
+            <br>
+
+         <h1>        Structural Directive        </h1>    
+    <br>
+         
+         Manipulating the dom element
+    <br>
+    ngif 
+    <br>
+    ngfor
+    <br>
+    ngswitch
+
+    <br>
+    <h1> Attribute Directive</h1>
+    <br>
+    change the look and behaviour of the dom
+    <br>
+    ngstyle 
+    <br>
+    ngclass  
+    <br>
+
+             <h1>Dependency injection</h1>
+    <br>
+          
+    
+    who ever the component needs the database connection we will write those connection logic
+    <br>
+    inside the component and configure the piece of code inside any service or class ,whoever 
+    <br>
+    the component need the code we just paste it from the service.
+    <br>
+
+
+         <h1>forms</h1>
+    <br>
+    Reactive Forms                Template Driven Forms
+
+           form model      more explicit created in     less explicit and created in directives
+                            component class
+    
+           Data Model      structured                      unstructured
+           
+           Predictability  synchronous                     asynchronously
+
+           Form Validation  Functions                      Directives
+
+           Mutability       Immutable                        mutable 
+
+         <h1>Does RxJS take unsubscribe?</h1>
+
+         The RxJS first() operator waits until the first value is emitted from an observable 
+         and then automatically unsubscribes
+
+         <h1>How to auto-unsubscribe in Angular 9</h1>
+
+          you can this in browser
+
+          <h1>What happens if we don't unsubscribe in angular?</h1>
+
+
+          Specifically, we must unsubscribe before Angular destroys the component. ...
+           Failure to do so could create a memory leak.
+
+           <h1>what is meant by subscribe in angular</h1>
+     Basically in angular subscribe is a method on the observable type. observable type is 
+     synchronously or asynchroussly streams data of variety of components or services
+     that have subscribed on observable.
+
+     <h1>What is the difference between let Var and Const in JavaScript?</h1>
+          var declarations are globally scoped, while let and const are block scoped.
+           var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; 
+           const variables can neither be updated nor re-declared. 
+          They are all hoisted to the top of their scope.<br>
+          <h1>The Document Object Model (DOM)  is a programming API for HTML and XML documents.
+                that allows programs and scripts
+                to dynamically access and update the content, structure, and style of a document</h1>
+         </div>
