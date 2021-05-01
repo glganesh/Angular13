@@ -12,16 +12,26 @@
             <div class='controles-container'>
                
                     <input formControlName='userseqid' matInput hidden>                   
+                    <input formControlName='id' matInput  hidden>  
 
-                    <input formControlName='id' matInput  hidden>    
                     <div class='form-group'>
                         <input type="text" class="form-control" formControlName='name' placeholder='NAME'>
+                    </div>
+                    <div class='form-group'>
+                        <input type="email" class="form-control" formControlName='email' placeholder='EMAIL'>
+                    </div>
+                     <div class='form-group'>
+                        <input type="mobile" class="form-control" formControlName='mobile' placeholder='MOBILE'>
+                    </div>
+                     <div class='form-group'>
+                        <input type="address" class="form-control" formControlName='address' placeholder='ADDRESS'>
+
                     </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
                 <!-- <mat-form-field>
                     <input formControlName='name' matInput placeholder="NAME" autocomplete="off">
                     <mat-error *ngIf="_service.form.controls['name'].errors?.required">This field is mandatory.</mat-error>
                     <mat-error *ngIf="_service.form.controls['name'].errors?.minlength">Minimum 8 charactors needed.</mat-error>
-                </mat-form-field!-->
+                </mat-form-field>
                 <mat-form-field>
                     <input formControlName='email' matInput placeholder="EMAIL" autocomplete="off">
                     <mat-error>This field is mandatory</mat-error>
@@ -34,8 +44,8 @@
                 <mat-form-field>
                     <input formControlName='address' matInput placeholder="ADDRESS" autocomplete="off">
             
-                </mat-form-field>
-                
+                </mat-form-field!-->
+
             </div>
         </mat-grid-tile>
     </mat-grid-list>

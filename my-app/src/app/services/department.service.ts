@@ -16,8 +16,8 @@ export class DepartmentService {
   form: FormGroup = new FormGroup({
     userseqid : new FormControl('0'),
     id: new FormControl('0'),
-    name: new FormControl('',[Validators.required]),
-    email: new FormControl('',Validators.required),
+    name: new FormControl(''),
+    email: new FormControl(''),
     mobile: new FormControl(''),
     address: new FormControl(''),
   })
