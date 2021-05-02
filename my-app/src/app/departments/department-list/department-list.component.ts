@@ -7,6 +7,7 @@ import { NotificationService } from 'src/app/notification.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { DepartmentComponent } from '../department/department.component';
 import{ ViewuserComponent} from '../viewuser/viewuser.component'
+
 @Component({
   selector: 'app-department-list',
   templateUrl: './department-list.component.html',
